@@ -19,14 +19,16 @@ from django.contrib import admin
 from django.urls import path
 from django_app import views
 
-from django.conf import settings
-from django.conf.urls.static import static
+# Remove these lines when integrating Cloudinary
+# from django.conf import settings
+# from django.conf.urls.static import static
 
 urlpatterns = [
     path('upload/', views.upload, name='upload'),
     path('display', views.display, name='display')
 ]
 
-urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+# Remove this line when integrating Cloudinary
+# urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 

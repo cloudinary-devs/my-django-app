@@ -8,6 +8,9 @@ class PhotoForm(ModelForm):
 
     class Meta:
         model = Photo
+        # Remove line when integrating Cloudinary
+        # Django image field
+        # fields = ['image']
         fields = '__all__'
 
     def __init__(self, *args, **kwargs):
