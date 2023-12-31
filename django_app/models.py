@@ -4,7 +4,6 @@ from cloudinary.models import CloudinaryField
 
 class Photo(models.Model):
     image = CloudinaryField('image')
-    # Remove this when integrating Cloudinary
-    # Django image field
+    # Remove Django image field when integrating Cloudinary
     # image = models.ImageField(upload_to='photos/')
   
