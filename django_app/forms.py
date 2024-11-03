@@ -8,16 +8,8 @@ class PhotoForm(ModelForm):
 
     class Meta:
         model = Photo
-        # Remove Django image field when integrating Cloudinary
-        # fields = ['image']
-        fields = '__all__'
+        fields = ['image']
 
-    def __init__(self, *args, **kwargs):
-       super().__init__(*args, **kwargs)
-       self.fields['image'].options={
-           'tags': 'new_image',
-           'format': 'png'
 
-    }
         
         
